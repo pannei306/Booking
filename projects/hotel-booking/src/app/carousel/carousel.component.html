@@ -1,0 +1,88 @@
+<div class="container-fluid">
+  <div class="row section">
+    <div class="carousel carousel-multiItem slide">
+      <div class="carousel-inner">
+        <section>
+          <div class="carousel-item active" fxLayout="row">
+            <div
+              *ngFor="let city of cities"
+              class="zoom hover"
+              fxFlex="25%"
+              fxFlex.xs="100%"
+              fxFlex.md="33.33"
+              fxFlex.sm="50%"
+              (click)="toggleShow(city)"
+            >
+              <div class="item">
+                <div class="town">
+                  <!-- <a href="#"
+                    ><img
+                      src="{{ city.img }}"
+                      class="img-responsive"
+                      id="img"
+                    />
+                  </a> -->
+                  <img
+                    src="{{ city.img }}"
+                    alt=""
+                    class="img-responsive"
+                    id="img"
+                    mat-elevation-z4
+                    matRipple
+                    routerLink="/hotel"
+                  />
+                  <!-- <mat-card class="mat-card">
+                    <mat-card-title class="title">
+                      {{ city.town }}
+
+                      <span
+                        class="glyphicon"
+                        [class.glyphicon-ok]="city.isLike"
+                        [class.glyphicon-heart]="!city.isLike"
+                        id="pink"
+                      ></span>
+                    </mat-card-title>
+                    <mat-card-content class="properties">
+                      {{ city.properties }} properties
+                    </mat-card-content>
+                  </mat-card> -->
+                  <div class="data-enter" id="data-enter">
+                    <h3>
+                      <a
+                        >{{ city.town }}
+                        <i
+                          *ngIf="!city.isLike"
+                          class="glyphicon glyphicon-ok"
+                          id="pink"
+                        ></i>
+                      </a>
+                    </h3>
+                    <span class="comment"
+                      >{{ city.properties }} properties</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-area">
+            <button type="button" class="prev carousel-control-prev" appPrev>
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button type="button" class="next carousel-control-next" appNext>
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

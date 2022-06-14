@@ -1,0 +1,150 @@
+<!-- <nav
+  class="navbar sticky-top navbar-expand-md navbar-light"
+  id="myTopnav"
+  role="main"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">
+      <img
+        src="assets/images/baganlane1.png"
+        height="1"
+        alt="BAGAN LANE"
+        loading="lazy"
+        style="margin-top: -1px; width: 150px; height: 35px"
+        class="d-inline-block align-top"
+        id="baganlane"
+      />
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="myFunction()"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div
+      class="navbar-collapse show"
+      [ngClass]="{ show: collapse }"
+      id="navbarNav"
+    >
+      <ul class="navbar-nav ms-auto">
+        <div class="d-flex align-items-center">
+          <li class="nav-item me-2">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#"
+              mat-raised-button
+              matTooltip="Choose your currency"
+              matTooltipClass="example-tooltip-red"
+              #tooltip="matTooltip"
+              [matTooltipPosition]="position.value"
+              matTooltipHideDelay="1"
+              ><span class="glyphicon glyphicon-usd"></span
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="#"
+              id="flag"
+              mat-raised-button
+              matTooltip="Choose your country"
+              matTooltipClass="example-tooltip-red"
+              #tooltip="matTooltip"
+              [matTooltipPosition]="position.value"
+              matTooltipHideDelay="1"
+              ><span class="glyphicon glyphicon-flag"></span
+            ></a>
+          </li>
+          <button type="button" class="btn btn-link px-3 me-2">Login</button>
+          <button type="button" class="btn btn-outline-primary me-3">
+            Sign up
+          </button>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<div class="nav fixed-top">
+  <input type="checkbox" id="nav-check" />
+  <div class="nav-header">
+    <div class="nav-title">
+      <a class="navbar-brand" href="">
+        <img
+          src="assets/images/baganlane1.png"
+          height="1"
+          alt="BAGAN LANE"
+          loading="lazy"
+          class="d-inline-block align-top"
+          id="baganlane"
+        />
+      </a>
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+  <div class="nav-links ms-auto">
+    <ul class="">
+      <li><a href="#" target="_blank" mat-raised-button
+        matTooltip="Currency"
+        matTooltipClass="example-tooltip-red"
+        #tooltip="matTooltip"
+        [matTooltipPosition]="position.value"
+        matTooltipHideDelay="1">$</a></li>
+      <li
+        mat-raised-button
+        matTooltip="Currency"
+        matTooltipClass="example-tooltip-red"
+        #tooltip="matTooltip"
+        [matTooltipPosition]="position.value"
+        matTooltipHideDelay="1"
+      >
+        <a href="#" target="_blank"
+          ><img
+            src="assets/images/myanmar.jpg"
+            height="1"
+            alt=""
+            loading="lazy"
+            class="d-inline-block align-top"
+            id="myanmar"
+          />
+        </a>
+      </li>
+      <li>
+        <button mdbBtn type="button" class="px-3 me-3" style="color: black" gradient="peach"
+        rounded="true" mdbWavesEffect>
+          Login
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="btn btn-primary me-4"
+          style="color: orange"
+        >
+          Sign up
+        </button>
+      </li>
+      <!-- <a class="icon">
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-youtube"></i>
+      </a> -->
+    </ul>
+  </div>
+</div>

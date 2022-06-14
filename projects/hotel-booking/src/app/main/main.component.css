@@ -1,0 +1,148 @@
+.container {
+  padding-top: 80px;
+}
+.card {
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 0;
+  width: calc(100%4);
+  padding: 10px 10px 10px 15px;
+}
+.title {
+  padding-bottom: 5px;
+}
+.img {
+  width: 80%;
+  height: 50%;
+}
+
+.zoom {
+  transition: transform 0.5s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(0.5); /* IE 9 */
+  -webkit-transform: scale(0.5); /* Safari 3-8 */
+  transform: scale(1.1);
+  color: rgb(46, 166, 246);
+}
+
+@media screen and(max-width:567) {
+  /* for carousel */
+  .carousel:not(:first-child) {
+    display: none;
+  }
+}
+
+#firstSlide {
+  padding: 5px;
+}
+ngb-carousel img {
+  width: 100%;
+  outline: none;
+}
+
+ngb-carousel {
+  width: inherit;
+  height: inherit;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+/* for ripple */
+div.ripple {
+  animation: ripple 0.01s linear;
+}
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
+}
+
+.example-ripple-container {
+  cursor: pointer;
+  text-align: center;
+
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* carousel */
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #aae1e0;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* .showarrow {
+  padding: 5em;
+} */
+ @media (min-width: 576px) and (max-width: 767.98px) {
+  .card img {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card img {
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .card img {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+#pink {
+  color: rgb(130, 188, 233);
+  font-size: large;
+  padding-left: 50px;
+}
+#mdy {
+  color: rgb(130, 188, 233);
+  font-size: large;
+  padding-left: 80px;
+}
+#tgi {
+  color: rgb(130, 188, 233);
+  font-size: large;
+  padding-left: 80px;
+}
+#ngwesaung {
+  color: rgb(130, 188, 233);
+  font-size: large;
+  padding-left: 45px;
+}
+#chaungthar {
+  color: rgb(130, 188, 233);
+  font-size: large;
+  padding-left: 35px;
+}

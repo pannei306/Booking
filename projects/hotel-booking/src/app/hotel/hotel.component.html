@@ -1,0 +1,115 @@
+<div class="container-fluid">
+  <div *ngFor="let hotel of hotels" class="spacing">
+    <mat-grid-list cols="5" rowHeight="200px" gutterSize="15px">
+      <mat-grid-tile [colspan]="1" [rowspan]="1" class="border">
+      </mat-grid-tile>
+
+      <mat-grid-tile
+        [colspan]="3"
+        [rowspan]="1"
+        class="border mat-elevation-z4"
+      >
+        <div class="zoom col-sm-5 col-lg col-md" id="grid">
+          <mat-grid-list cols="4" rowHeight="70px">
+            <mat-grid-tile [colspan]="4" [rowspan]="2">
+              <img
+                mat-card-image
+                src="{{ hotel.mainPic }}"
+                alt="card images"
+                id="img"
+              />
+            </mat-grid-tile>
+            <mat-grid-tile
+              [colspan]="1"
+              [rowspan]="1"
+              *ngFor="let pic of hotel.sidepics"
+              ><img
+                mat-card-image
+                src="{{ pic }}"
+                class="card-image"
+                alt="card images"
+                id="sideimg"
+              />
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <div class="bg-image">
+                <img
+                  mat-card-image
+                  src="assets/images/lotteint7.jpg"
+                  class="card-image"
+                  alt="card images"
+                  id="sideimg"
+                />
+              </div>
+              <div class="bg-text">
+                <p>See all</p>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="card-body col-sm-4 col-lg col-md">
+          <mat-card-header class="">
+            <mat-card-title class="card-title"
+              >{{ hotel.title }}
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-subtitle>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span
+            ><span class="glyphicon glyphicon-star"></span
+            ><span class="glyphicon glyphicon-star"></span>
+            {{ hotel.location }}</mat-card-subtitle
+          >
+          <br /><br />
+
+          <mat-card-content>
+            <!-- <div class="border d-inline" id="facilities">
+                {{ hotel.facilities }}
+              </div> -->
+            <div *ngFor="let fac of hotel.facilities" class="d-inline">
+              <div
+                class="border d-inline"
+                id="facilities"
+                mat-raised-button
+                matTooltip="See more Facilities"
+                matTooltipClass="example-tooltip-red"
+                #tooltip="matTooltip"
+                [matTooltipPosition]="position.value"
+                matTooltipHideDelay="1"
+              >
+                {{ fac }}
+              </div>
+            </div>
+          </mat-card-content>
+        </div>
+
+        <div class="col-sm-3 col-lg col-md">
+          <mat-grid-list cols="2" rowHeight="25px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <p id="supersub">Superb</p>
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="1" [rowspan]="2">
+              <button
+                class="btn btn-primary btn-md"
+                type="button"
+                id="reviewcount"
+              >
+                7.6
+              </button>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1" class="text-muted">
+              <div></div>
+              {{ hotel.review }} reviews
+            </mat-grid-tile>
+          </mat-grid-list>
+          <br />
+          <p class="price">${{ hotel.price }}</p>
+          <button class="btn btn-primary" type="button">Select Room</button>
+        </div>
+      </mat-grid-tile>
+
+      <mat-grid-tile [colspan]="1" [rowspan]="1" class="border"></mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

@@ -1,0 +1,211 @@
+.item {
+  display: inline-block;
+
+  position: relative;
+}
+.town {
+  width: 300px;
+  height: 200px;
+  margin: 0px 14px;
+}
+.container-fluid {
+  /* padding-top: 50px;
+  padding-left: 95px;
+  padding-right: 95px; */
+  padding: 50px 95px 10px 95px;
+}
+.img-responsive {
+  width: 700px;
+  height: 180px;
+}
+.mat-card {
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 0;
+  width: calc(100%4);
+  padding: 10px 10px 50px 15px;
+}
+.title {
+  padding-bottom: 5px;
+}
+.properties {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.zoom {
+  transition: transform 0.5s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(0.5); /* IE 9 */
+  -webkit-transform: scale(0.5); /* Safari 3-8 */
+  transform: scale(1.1);
+  color: rgb(46, 166, 246);
+}
+
+/* carousel */
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #aae1e0;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.next {
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/*start  content img  style */
+
+.item h3 > a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 700;
+  max-width: 279.233px;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2px;
+}
+
+.item h3 > a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.data-enter span {
+  margin-left: 15px;
+  /* margin-right: 15px; */
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  min-height: 50px;
+  padding: 30px 15px 20px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  margin: 0;
+  z-index: 23;
+  transition: all 0.5s ease;
+  font-family: "Roboto";
+}
+
+.data-enter h3 {
+  position: absolute;
+  bottom: 7%;
+  left: 0;
+  z-index: 21;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  max-width: 90%;
+  margin-left: 15px;
+  padding: 0 10px 20px;
+  color: #fff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  font-family: "Roboto";
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.hover:hover span {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+  transform: translate(0px, -15px);
+}
+
+.hover:hover h3 {
+  transform: translate(0px, -20px);
+}
+
+.data-enter .comment {
+  float: left;
+  color: #fff;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 23.8px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 15px;
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+/* favorite */
+#pink {
+  color: rgb(130, 188, 233);
+  font-size: large;
+  padding-left: 50px;
+}
+#mdy {
+  color: rgb(130, 188, 233);
+  font-size: large;
+  padding-left: 80px;
+}
+#tgi {
+  color: rgb(130, 188, 233);
+  font-size: large;
+  padding-left: 80px;
+}
+#ngwesaung {
+  color: rgb(130, 188, 233);
+  font-size: large;
+  padding-left: 45px;
+}
+#chaungthar {
+  color: rgb(130, 188, 233);
+  font-size: large;
+  padding-left: 35px;
+}
+/* for ripple */
+div.ripple {
+  animation: ripple 0.01s linear;
+}
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
+}
+
+.example-ripple-container {
+  cursor: pointer;
+  text-align: center;
+
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
